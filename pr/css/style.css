@@ -1,0 +1,830 @@
+@charset "UTF-8";
+
+/* @import url(/css/sanitize.css); */
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	/* font-family: 'Noto Sans Japanese', serif; */
+	font-family: "Catamaran", sans-serif;
+	font-size: 1.35rem;
+	font-weight: 100;
+	/* width: 640px; */
+	margin: 0 auto;
+	padding: 0;
+	/* background-color: #EEEEEE; */
+	/* contain: paint; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: 100;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	/* overflow: visible; */
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+	color: #0000ff;
+	text-decoration: none;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+small {
+	font-size: 1.3rem;
+	display: block;
+	line-height: 1;
+}
+
+/* 
+***************************************************
+normalizeここまで
+***************************************************
+ */
+a {
+	color: green;
+}
+
+body {
+	background-color: #fafeff;
+	color: #334444;
+}
+
+body>* {
+	margin: 20px auto;
+}
+
+ul.bullet li {
+	list-style-type: disc;
+}
+
+#to_top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background-color: rgba(128, 128, 128, .9);
+	padding: 10px;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#to_top>* {
+	height: 15px;
+	width: 15px;
+	border-top: 3px solid #fff;
+	border-right: 3px solid #fff;
+	transform: translateY(15%) rotate(-45deg);
+}
+
+*[href$=".pdf"] {
+	background: aqua;
+}
+
+header {
+	margin: 0 auto;
+}
+
+#kv {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	background: url('../img/water/04.jpg') center 70% no-repeat;
+	height: 400px;
+	background-size: cover;
+	color: #fff;
+	text-shadow:
+		2px 2px 1px #003366,
+		-2px 2px 1px #003366,
+		2px -2px 1px #003366,
+		-2px -2px 1px #003366,
+		2px 0px 1px #003366,
+		0px 2px 1px #003366,
+		-2px 0px 1px #003366,
+		0px -2px 1px #003366;
+}
+
+#kv h1 {
+	font-size: 4rem;
+	position: absolute;
+	color: #fff;
+	top: 0;
+	left: 0;
+}
+
+#kv p {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%);
+	font-size: 2rem;
+}
+
+nav {
+	position: sticky;
+	top: 0px;
+	z-index: 999;
+	margin: 0;
+	width: 100%;
+	background-color: navy;
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-around;
+	align-items: stretch;
+	margin: 0;
+}
+
+nav li a {
+	display: block;
+	padding: 20px;
+	/* width: 200px; */
+}
+
+nav a,
+nav a:link,
+nav a:visited {
+	color: white;
+	text-align: center;
+}
+
+nav a:hover {
+	/* text-decoration: underline; */
+	background-color: white;
+	color: navy;
+}
+
+main section {
+	display: flex;
+	margin: 240px 0;
+	gap: 80px;
+	padding: 40px;
+	/* background-color: #666; */
+}
+
+main section h2 {
+	margin-bottom: 20px;
+	font-size: clamp(1rem, -2.273rem + 16.36vw, 10rem);
+	font-weight: 100;
+	position: relative;
+	/* width: 30%; */
+	flex-basis: 30%;
+	/* background-color: red; */
+}
+
+main section>*:nth-child(2) {
+	/* background-color: blue; */
+	flex-basis: 70%;
+}
+
+main section h2::after {
+	color: #eeeeee;
+	opacity: .7;
+	z-index: -1;
+	display: block;
+	text-transform: capitalize;
+	font-size: 10rem;
+	margin-top: 0em;
+	border-top: solid 2px rgba(238, 238, 238, .5);
+}
+
+main section h3 {
+	margin-bottom: 20px;
+	font-size: 5rem;
+	font-weight: 100;
+}
+
+main section h4 {
+	margin-bottom: 20px;
+	font-size: 3rem;
+	font-weight: 100;
+}
+
+main section p,
+main section ul {
+	margin-bottom: 80px;
+}
+
+main section p:last-child {
+	/* margin-bottom: 0; */
+}
+
+main section li {
+	margin-bottom: 10px;
+}
+
+/* サービス内容 */
+#sec_service h2::after {
+	content: "service";
+}
+
+#sec_service ul {
+	display: flex;
+	justify-content: space-around;
+	align-items: stretch;
+	/* text-align: center; */
+	gap: 20px;
+	padding: 20px;
+	margin-bottom: 0;
+}
+
+#sec_service li {
+	/* background-color: red; */
+	margin: 0 auto;
+	width: calc(100% / 3);
+	/* background:url('https://placehold.jp/500x500.png') no-repeat center; */
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	border-radius: 2px;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+#sec_service li:nth-child(1) {
+	background-image: url('../img/service_production.jpg');
+}
+
+#sec_service li:nth-child(2) {
+	background-image: url('../img/service_wp.jpg');
+}
+
+#sec_service li:nth-child(3) {
+	background-image: url('../img/service_release.jpg');
+}
+
+#sec_service li h3 {
+	position: absolute;
+	bottom: -60px;
+	font-size: 2rem;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+		z-index: 1;
+	}
+
+	to {
+		opacity: 0;
+		z-index: -1;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		z-index: -1;
+	}
+
+	to {
+		opacity: 1;
+		background-color: rgba(0, 0, 0, 0.7);
+		/* color:#fff; */
+		z-index: 1;
+	}
+}
+
+#sec_service li p {
+	animation: fadeOut .5s both;
+	/* background-color: red; */
+	position: absolute;
+	inset: 0;
+	background-color: #000;
+	color: #fff;
+	line-height: 200%;
+	padding: 10%;
+	margin-bottom: 0;
+}
+
+#sec_service li:hover p {
+	animation: fadeIn .5s both;
+}
+
+/* 自己紹介 */
+#sec_about h2::after {
+	content: "profile";
+}
+
+/* スキル */
+#sec_skill h2::after {
+	content: "skill";
+}
+
+#sec_skill ul {
+	display: flex;
+	flex-wrap: wrap;
+	/* align-items: center; */
+	justify-content: space-between;
+	/* gap: 32px; */
+	gap: 1%;
+}
+
+#sec_skill li {
+	/* width: calc(33% - 32px); */
+	width: 30%;
+	height: auto;
+	color: navy;
+	position: relative;
+	/* background-color: green; */
+}
+
+#sec_skill li::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: '';
+	width: 36%;
+	height: 36%;
+	padding: 0 4%;
+	background: transparent no-repeat 0 0px;
+	background-size: contain;
+}
+
+#sec_skill li.skill_html::before {
+	background-image: url('../img/skill_html.png');
+}
+
+#sec_skill li.skill_js::before {
+	background-image: url('../img/skill_js.png');
+}
+
+#sec_skill li.skill_php::before {
+	background-image: url('../img/skill_php.png');
+}
+
+#sec_skill li.skill_wp::before {
+	background-image: url('../img/skill_wp.png');
+}
+
+#sec_skill li.skill_ec::before {
+	background-image: url('../img/skill_ec.png');
+}
+
+#sec_skill li.skill_seo::before {
+	background-image: url('../img/skill_seo.png');
+}
+
+#sec_skill li.skill_design::before {
+	background-image: url('../img/skill_design.png');
+}
+
+@keyframes focusOut {
+	from {
+		opacity: 1;
+		z-index: 1;
+	}
+
+	to {
+		opacity: 0;
+		z-index: -1;
+	}
+}
+
+@keyframes focusIn {
+	from {
+		opacity: 0;
+		z-index: -1;
+	}
+
+	to {}
+}
+
+#sec_skill li:hover {
+	cursor: pointer;
+}
+
+#sec_skill li.main {
+	/* background-color: transparent; */
+	border-color: navy;
+}
+
+#sec_skill li h3 {
+	display: block;
+	font-size: 3rem;
+	font-weight: 500;
+	margin-left: 40%;
+	line-height: 1em;
+	height: 100px;
+	/* background-color: green; */
+}
+
+#sec_skill li h3>* {
+	width: 100%;
+}
+
+#sec_skill li h3::after {
+	display: block;
+	margin-left: -5px;
+	/* background-color: red; */
+	font-size: .6em;
+	line-height: .5;
+}
+
+#sec_skill li.skill_html h3::after {
+	content: '★★★★★';
+}
+
+#sec_skill li.skill_js h3::after {
+	content: '★★★★☆';
+}
+
+#sec_skill li.skill_php h3::after {
+	content: '★★★☆☆';
+}
+
+#sec_skill li.skill_wp h3::after {
+	content: '★★★☆☆';
+}
+
+#sec_skill li.skill_ec h3::after {
+	content: '★★☆☆☆';
+}
+
+#sec_skill li.skill_seo h3::after {
+	content: '★★★★★';
+}
+
+#sec_skill li.skill_design h3::after {
+	content: '★★★☆☆';
+}
+
+#sec_skill li h3 span {
+	/* margin-left: 20px; */
+	display: block;
+	font-size: .4em;
+	padding: 0;
+	/* line-height: 2.2em; */
+}
+
+#sec_skill li p {
+	/* background-color: pink; */
+	padding-top: 32px;
+}
+
+#sec_skill li:hover p {
+	/* animation: slideDown .5s both; */
+}
+
+li.pab {
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+li.pab svg {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%) rotate(-90deg);
+	transform: translate(-50%, -50%) rotate(-90deg);
+	/* background-color: red; */
+}
+
+/* 作品集 */
+#sec_works h2::after {
+	content: "works";
+}
+
+#sec_works ul.thumb {
+	width: calc(70% - 40px);
+	/* margin-inline: auto;  */
+}
+
+#sec_works ul.thumb li.thumb_item {
+	margin: 0 5px;
+	height: 300px;
+	/* background:orange; */
+}
+
+#sec_works .thumb .slick-arrow {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: #fff;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	font-size: 0;
+	position: absolute;
+	top: 180px;
+	z-index: 1;
+	filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+}
+
+#sec_works .thumb .slick-arrow::before {
+	content: '';
+	display: block;
+	width: 12px;
+	height: 12px;
+	border: 1px solid #09000d;
+	border-width: 3px 3px 0 0;
+	position: absolute;
+	top: 24px;
+	transform: rotate(45deg);
+}
+
+#sec_works .thumb .slick-next {
+	right: 0;
+}
+
+#sec_works .thumb .slick-prev {
+	left: 0;
+}
+
+#sec_works .thumb .slick-next::before {
+	left: 20px;
+}
+
+#sec_works .thumb .slick-prev::before {
+	border-width: 0 0 3px 3px;
+	right: 22px;
+}
+
+#sec_works ul.thumb li h3 {
+	border-radius: 2px;
+	font-size: 1.4rem;
+	/* font-weight: 100; */
+	/* display: inline-block; */
+	padding: 5px;
+	/* vertical-align: middle; */
+}
+
+#sec_works .thumb_spa h3 {
+	color: #333;
+	background-color: #fff;
+	border: 3px solid green;
+}
+
+#sec_works .thumb_mos h3 {
+	color: #eee;
+	background-color: #000;
+	border: 3px solid darkgreen;
+}
+
+#sec_works .thumb_coach h3 {
+	color: green;
+	background-color: yellow;
+	border: 3px solid lightgreen;
+}
+
+#sec_works .thumb_cosme h3 {
+	color: purple;
+	background-color: #fff;
+	border: 3px solid plum;
+}
+
+#sec_works .thumb_organic h3 {
+	color: beige;
+	background-color: brown;
+	border: 3px solid beige;
+}
+
+#sec_works .thumb_fgblog h3 {
+	color: deeppink;
+	background-color: lightpink;
+	border: 3px solid deeppink;
+}
+
+#sec_works .thumb_startup h3 {
+	color: #fff;
+	background-color: red;
+	border: 3px solid yellow;
+}
+
+/* お問い合わせ */
+#sec_inq h2::after {
+	content: "contact";
+}
+
+#sec_inq form {
+	/* margin: 0 auto; */
+}
+
+#sec_inq div p {
+	margin-bottom: 2%;
+}
+
+#sec_inq div p:last-child {
+	display: inline-block;
+	background-color: #999;
+	color: #fff;
+	padding: 3% 1%;
+}
+
+#sec_inq div p:last-child a {
+	color: #fff;
+	text-decoration: underline;
+}
+
+#sec_inq div p:last-child a:hover {
+	background-color: #fff;
+	color: #333;
+}
+
+#sec_inq form p {
+	/* background-color: aqua; */
+}
+
+#sec_inq form dl {
+	display: flex;
+	/* background-color: red; */
+	justify-content: start;
+	flex-wrap: wrap;
+	width: 80%;
+	align-items: center;
+	gap: 20px 0;
+	margin-bottom: 20px;
+	max-width: 800px;
+	/* margin: auto; */
+}
+
+#sec_inq form dt {
+	width: 30%;
+	/* text-align: right; */
+	/* flex-basis: 3; */
+}
+
+#sec_inq form dd {
+	width: 70%;
+	/* background-color: yellow; */
+	/* flex-basis: 7; */
+}
+
+#sec_inq form dl input,
+#sec_inq form dl textarea {
+	width: 100%;
+	border-radius: 2px;
+}
+
+#sec_inq form dt.required::after {
+	content: "(※必須)";
+	color: #ee3333;
+	margin: 0 6px;
+}
+
+#sec_inq form input[type="submit"],
+#sec_inq form input[type="button"] {
+	cursor: pointer;
+}
+
+#sec_inq form input[type="submit"] {
+	margin-right: 60px;
+}
+
+.form_btns {
+	margin: 20px auto;
+	width: 50%;
+	/* background-color: yellow; */
+}
+
+.form_btns input[type="submit"],
+.form_btns input[type="button"] {
+	padding: 12px 32px;
+	font-size: 1.2em;
+}
+
+footer p {
+	text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+	body>* {
+		/* width: 90%; */
+	}
+
+	main section {
+		display: block;
+		margin: 0;
+		padding: 2%;
+	}
+
+	main section h2 {
+		font-size: 2rem;
+		text-align: center;
+	}
+
+	main section h2::after {
+		display: none;
+	}
+
+	main section>*:nth-child(2) {
+		flex-basis: auto;
+	}
+
+	main section h3 {
+		font-size: 1.8rem;
+	}
+
+	main section h4 {
+		font-size: 1.6rem;
+	}
+
+	main section p,
+	main section ul {
+		margin-bottom: 5%;
+	}
+
+	/* service */
+	#sec_service ul {
+		height: 500px;
+	}
+
+	#sec_service li {
+		position: relative;
+		display: block;
+		padding: 3% 1%;
+		height: 200px;
+	}
+
+	#sec_service li::before {
+		display: none;
+	}
+
+	#sec_service li h3 {
+		position: absolute;
+		top: 220px;
+		left: auto;
+	}
+
+	#sec_service li p {
+		animation: none;
+		position: absolute;
+		top: calc(220px + 4em);
+		height: 250px;
+		background-color: transparent;
+		color: #000;
+		line-height: 1.6;
+		padding: 0;
+		margin-bottom: 0;
+	}
+
+	#sec_service li:hover p {
+		animation: none;
+	}
+
+	/* skill */
+	#sec_skill li {
+		width: calc(50% - 32px);
+		height: auto;
+	}
+
+	#sec_skill li h3 {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-end;
+	}
+
+	#sec_skill li p {
+		padding-top: 0;
+	}
+
+	#sec_works ul.thumb {
+		width: 95%;
+	}
+
+	#sec_inq div {
+		text-align: center; 
+	}
+
+	.form_btns {
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 640px) {}
