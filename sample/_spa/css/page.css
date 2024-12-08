@@ -1,0 +1,317 @@
+@charset "UTF-8";
+
+main section{
+    margin:0 2%;
+}
+main section h2 {
+    font-size: 2rem;
+    border: solid 1px #1A5908;
+    border-radius: 8px;
+    padding: 1%;
+}
+
+main section h3 {
+    font-size: 1.8rem;
+    margin-top: 5%;
+    padding-bottom: 2%;
+}
+li.imgTxtFlx {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    /* gap:0 5% 10%; */
+    margin-bottom: 10%;
+}
+li.imgTxtFlx h4 {
+    font-size: 1.6rem;
+    margin:0;
+    padding-bottom: 2%;
+}
+
+li.imgTxtFlx img {
+    height: clamp(20em, 25vw, 40em);
+    margin: 0 4vw 0 0;
+}
+
+li.imgTxtFlx.flxRev img {
+    margin: 0 0 0 4vw;
+}
+
+ul.card{
+    display: flex;
+    flex-wrap: wrap;
+    gap:2%;
+    margin:2% 0;
+}
+ul.card li{
+    width:32%;
+    height:100%;
+    margin: 0;
+    counter-increment: number;
+}
+ul.card li h4{
+    position: relative;
+    background:transparent no-repeat bottom right;
+    background-size: 80px;
+    height:120px;
+    display: flex;
+    align-items: flex-end;
+    font-size:1.4em;
+    text-shadow: 1px 1px 0 #FFF, -1px -1px 0 #FFF,
+    -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+    0px 1px 0 #FFF,  0-1px 0 #FFF,
+    -1px 0 0 #FFF, 1px 0 0 #FFF;
+}
+ul.card li h4::before{
+    content: "0" counter(number);
+    display: block;
+    position: absolute;
+    bottom:.5em;
+    font-size:2rem;
+    font-weight: 700;
+}
+ul.card li:nth-child(1) h4{
+    background-image: url('../img/facility/card01.png');
+}
+ul.card li:nth-child(2) h4{
+    background-image: url('../img/facility/card02.png');
+}
+ul.card li:nth-child(3) h4{
+    background-image: url('../img/facility/card03.png');
+}
+ul.card li:nth-child(4) h4{
+    background-image: url('../img/facility/card04.png');
+}
+ul.card li:nth-child(5) h4{
+    background-image: url('../img/facility/card05.png');
+}
+ul.card li p{
+    background-color: #82c06c;
+    border-radius: 4px;
+    color:#fff;
+    padding:5%;
+    margin:5% 0 0;
+    height: 15em; 
+    /* height:min(31vw,23em); */
+    /* height:max(32vw,13em); */
+
+}
+#rest_kv{
+    background:url('../img/facility/rest_kv.png') no-repeat top center;
+    background-size:cover;
+    height:400px;
+    padding:100px 12.5%;
+    margin-bottom:8%;
+}
+#rest_kv span{
+    background:rgba(255,255,255,.6);
+    border-radius: 8px;
+    padding:3% 5%;
+    display: block;
+    color:#333;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    /* text-align: center; */
+}
+#rest ul{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap:2%;
+}
+#rest li{
+    width:30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#rest li img{
+    /* max-width:-moz-available; */
+    width: 100%;
+    /* height:100%; */
+}
+
+/* #family.html */
+body#family section ul.fullVW{
+    padding: 0;
+}
+body#family section ul.fullVW li{
+    position: relative;
+}
+body#family section ul.fullVW li img{
+    width:100%;
+    display: block;
+}
+body#family .slick_wrap img{
+    opacity: 1;
+}
+body#family .slick_wrap div{
+    /* height:90vh !important; */
+    padding:0 !important;
+    margin:0 !important;
+}
+body#family section ul.fullVW li div.caption{
+    position:absolute;
+    top:20%;
+    left:50%;
+    width:35vw;
+    padding:2% 4%;
+    border-radius: 4px;
+    background:rgba(255,255,255,.4);
+    z-index:9999;
+}
+body#family section ul.fullVW li:nth-child(2) div.caption{
+    top:55%;
+    left:10%;
+} 
+body#family section ul.fullVW li:nth-child(3) div.caption{
+    top:60%;
+    left:55%;
+} 
+body#family section ul.fullVW li:nth-child(4) div.caption{
+    top:35%;
+    left:60%;
+} 
+body#family .lastTxt{
+    margin:8% auto 4%;
+    width:380px;
+    line-height: 2;
+    text-align: center;
+}
+/* #qa.html */
+#qa_list dt,
+#qa_list dd{
+    width:100%;
+}
+#qa_list dt{
+    cursor: pointer;
+    position: relative;
+    /* padding:.8em 0 .8em 3rem; */
+    padding-left:3.5rem;
+    line-height: 3.5rem;
+    font-size:1.4rem;
+    color:#1A5908;
+    height:3.5rem;
+    background-color: #fff;
+    border-bottom: solid 2px #1A5908;
+    border-radius: 1px;
+    margin-bottom: 4%;
+}
+#qa_list dt::before{
+    position: absolute;
+    top:0;
+    left: 0.5rem;
+    content:"Q";
+    display: block;
+    font-size:2.5rem;
+    font-weight: 500;
+}
+#qa_list dt::after{
+    position: absolute;
+    /* left:calc(100% - 4rem); */
+    top:0;
+    right: .5rem; 
+    content:"+";
+    display: block;
+    font-size:2.5rem;
+    font-weight: 500;
+}
+#qa_list dt.open{
+    color:#fff;
+    background-color: #1A5908;
+    margin-bottom: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+#qa_list dt.open::before{
+    /* content:"A"; */
+    color:#fff;
+}
+
+#qa_list dt.open::after{
+    content:"－";
+}
+
+#qa_list dd{
+    display: none;
+    position: relative;
+    padding:.6em 0 1.3em 3.5rem;
+    margin-bottom: 4%;
+}
+#qa_list dd::before{
+    content:"A";
+    position: absolute;
+    top:0;
+    left: 0.5rem;
+    display: block;
+    font-size:2.5rem;
+    font-weight: 500;
+    color:#1A5908;
+}
+#qa_list dd.open{
+    display: block;
+    background-color:#c2eacc;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    li.imgTxtFlx {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    li.imgTxtFlx img {
+        width: 100%;
+    }
+
+    li.imgTxtFlx img,
+    li.imgTxtFlx.flxRev img {
+        margin:0;
+        margin-bottom: 5%;
+    }
+
+    ul.card li p{
+        /* height: 100%; */
+        /* height:auto; */
+    }
+    ul.card li p::after{
+        content:"";
+        display: block;
+        height:100%;
+    }
+
+
+    body#family section ul.fullVW li div.caption{
+        width:45vw;
+        padding:2% 4%;
+        border-radius: 4px;
+        background:rgba(255,255,255,.7);
+    }
+    body#family section ul.fullVW li:nth-child(1) div.caption{
+        /* top:5%;
+        left:5%; */
+        top:unset;
+        left:unset;
+        right:10%;
+        bottom:15%;
+    } 
+    body#family section ul.fullVW li:nth-child(2) div.caption{
+        top:25%;
+        left:15%;
+    } 
+    body#family section ul.fullVW li:nth-child(3) div.caption{
+        top:5%;
+        left:unset;
+        right:5%;
+    } 
+    body#family section ul.fullVW li:nth-child(4) div.caption{
+        top:15%;
+        left:unset;
+        right:1%;
+    } 
+    
+
+}
+
+@media screen and (max-width: 640px) {
+}
