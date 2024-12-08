@@ -113,10 +113,6 @@ header {
 }
 
 #kv {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: relative;
 	background: url('../img/water/04.jpg') center 70% no-repeat;
 	height: 400px;
 	background-size: cover;
@@ -130,22 +126,16 @@ header {
 		0px 2px 1px #003366,
 		-2px 0px 1px #003366,
 		0px -2px 1px #003366;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
+#kv > *{
+}
 #kv h1 {
 	font-size: 4rem;
-	position: absolute;
 	color: #fff;
-	top: 0;
-	left: 0;
-}
-
-#kv p {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%);
-	font-size: 2rem;
 }
 
 nav {
@@ -586,45 +576,51 @@ li.pab svg {
 }
 
 #sec_works .thumb_spa h3 {
-	color: #333;
+	color: green;
 	background-color: #fff;
-	border: 3px solid green;
+	/* border: 3px solid green; */
 }
 
 #sec_works .thumb_mos h3 {
 	color: #eee;
 	background-color: #000;
-	border: 3px solid darkgreen;
+	/* border: 3px solid darkgreen; */
 }
 
 #sec_works .thumb_coach h3 {
-	color: green;
+	color: black;
 	background-color: yellow;
-	border: 3px solid lightgreen;
+	/* border: 3px solid lightgreen; */
+}
+
+#sec_works .thumb_sky h3 {
+	color: #1E90FF;
+	background-color: #F0F8FF;
+	/* border: 3px solid lightgreen; */
 }
 
 #sec_works .thumb_cosme h3 {
 	color: purple;
 	background-color: #fff;
-	border: 3px solid plum;
+	/* border: 3px solid plum; */
 }
 
 #sec_works .thumb_organic h3 {
 	color: beige;
 	background-color: brown;
-	border: 3px solid beige;
+	/* border: 3px solid beige; */
 }
 
 #sec_works .thumb_fgblog h3 {
 	color: deeppink;
 	background-color: lightpink;
-	border: 3px solid deeppink;
+	/* border: 3px solid deeppink; */
 }
 
 #sec_works .thumb_startup h3 {
 	color: #fff;
 	background-color: red;
-	border: 3px solid yellow;
+	/* border: 3px solid yellow; */
 }
 
 /* お問い合わせ */
@@ -819,7 +815,7 @@ footer p {
 	}
 
 	#sec_inq div {
-		text-align: center; 
+		text-align: center;
 	}
 
 	.form_btns {
