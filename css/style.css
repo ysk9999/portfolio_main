@@ -55,7 +55,7 @@ ul li {
 }
 
 small {
-	font-size: 1rem;
+	font-size: 1.3rem;
 	display: block;
 	line-height: 1;
 }
@@ -117,7 +117,7 @@ header {
 	align-items: center;
 	justify-content: center;
 	position: relative;
-	background: url('/img/water/04.jpg') center 70% no-repeat;
+	background: url('../img/water/04.jpg') center 70% no-repeat;
 	height: 400px;
 	background-size: cover;
 	color: #fff;
@@ -441,9 +441,11 @@ main section li {
 	height: 100px;
 	/* background-color: green; */
 }
-#sec_skill li h3 > *{
+
+#sec_skill li h3>* {
 	width: 100%;
 }
+
 #sec_skill li h3::after {
 	display: block;
 	margin-left: -5px;
@@ -524,9 +526,9 @@ li.pab svg {
 	/* margin-inline: auto;  */
 }
 
-#sec_works ul.thumb li.thumb_item{
+#sec_works ul.thumb li.thumb_item {
 	margin: 0 5px;
-	height:300px;
+	height: 300px;
 	/* background:orange; */
 }
 
@@ -634,6 +636,27 @@ li.pab svg {
 	/* margin: 0 auto; */
 }
 
+#sec_inq div p {
+	margin-bottom: 2%;
+}
+
+#sec_inq div p:last-child {
+	display: inline-block;
+	background-color: #999;
+	color: #fff;
+	padding: 3% 1%;
+}
+
+#sec_inq div p:last-child a {
+	color: #fff;
+	text-decoration: underline;
+}
+
+#sec_inq div p:last-child a:hover {
+	background-color: #fff;
+	color: #333;
+}
+
 #sec_inq form p {
 	/* background-color: aqua; */
 }
@@ -696,9 +719,10 @@ li.pab svg {
 	font-size: 1.2em;
 }
 
-footer p{
+footer p {
 	text-align: center;
 }
+
 @media screen and (max-width: 1024px) {
 	body>* {
 		/* width: 90%; */
@@ -782,15 +806,20 @@ footer p{
 
 	#sec_skill li h3 {
 		display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
+		flex-wrap: wrap;
+		align-items: flex-end;
 	}
+
 	#sec_skill li p {
 		padding-top: 0;
 	}
 
 	#sec_works ul.thumb {
 		width: 95%;
+	}
+
+	#sec_inq div {
+		text-align: center; 
 	}
 
 	.form_btns {
